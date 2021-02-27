@@ -9,10 +9,12 @@ import { ActivatedRoute, ActivatedRouteSnapshot, Router } from '@angular/router'
 export class AppComponent {
   title = 'crowfunding';
   count = 0;
-  constructor(private route: Router) {
-    route.events.subscribe((url: any) => {
-      if (url.toString() === '') {
-        console.log(this.count++);
-    }});
-  }
+  path: string;
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
+    console.log(activatedRoute.snapshot.url);
+    this.path = activatedRoute.snapshot.url[0].path;
+    if (this.path === '') {
+      this.count++;
+    } // array of states
+    console.log(activatedRoute.snapshot.url[0].path); }
 }
