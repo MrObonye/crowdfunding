@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, ActivatedRouteSnapshot, Router } from '@angular/router';
+import { url } from 'inspector';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'crowfunding';
+  count: number;
+  constructor(private route: Router) {
+    route.events.subscribe((url: any) => {
+      if (url === '') {
+        this.count++;
+    }});
+  }
 }
