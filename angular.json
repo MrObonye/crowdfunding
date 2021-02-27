@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "crowfunding"
+    }
+  },
+  "defaultProject": "crowfunding",
+  "cli": {
+    "analytics": false
+  }
 }
