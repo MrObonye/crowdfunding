@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, ActivatedRouteSnapshot, Router } from '@angular/router';
-import { url } from 'inspector';
+import { ActivatedRoute, ActivatedRouteSnapshot, Router } from '@angular/router'
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
