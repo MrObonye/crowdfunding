@@ -8,11 +8,11 @@ import { ActivatedRoute, ActivatedRouteSnapshot, Router } from '@angular/router'
 })
 export class AppComponent {
   title = 'crowfunding';
-  count: number;
+  count = 0;
   constructor(private route: Router) {
     route.events.subscribe((url: any) => {
-      if (url === '') {
-        this.count++;
+      if (url.toString() === '') {
+        console.log(this.count++);
     }});
   }
 }
