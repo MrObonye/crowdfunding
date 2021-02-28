@@ -1,0 +1,43 @@
+@import "./dashboard";
+@import "./buttons";
+@import './card';
+
+.hero {
+  position: absolute;
+  margin-top: -90px;
+  margin-left: 20px;
+  color: $darkGray;
+  font-weight: 400;
+  // height: 400px;
+  font-family: "Commissioner", sans-serif;
+  width: 80%;
+  border-radius: 10px;
+  border: none;
+  overflow: none;
+  text-align: center;
+  &-master-logo {
+    position: absolute;
+    top: -22px;
+    left: 121px;
+  }
+}
+.mastercraft {
+  top: 20px;
+  position: relative;
+}
+.header {
+  padding-top: 20px;
+  font-weight: 700;
+  font-size:16px;
+  text-align: left;
+  color: $Black;
+}
+.analytics {
+  position: relative;
+  top: 30px;
+}
+.progress {
+  position: relative;
+  margin-top: 25px;
+  border-radius: 5px;
+}

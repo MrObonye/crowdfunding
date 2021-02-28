@@ -20,20 +20,22 @@ export class RectangularButtonComponent implements OnInit {
   styleButton() {
     if (this.buttonType === 'accept-button') {
       return {
-        btn: true,
         'accept-button': true,
 
       };
     } else if (this.buttonType === 'card-button') {
       return {
-        btn: true,
         'card-button': true,
+      };
+    } else if (this.buttonType === 'disabled-button') {
+      return {
+        'disabled-button': true
       };
     } else {
       return {
         btn: true,
-        'disabled-button': true
-      };
+        'btn btn-success': true
+      }
     }
 
   }

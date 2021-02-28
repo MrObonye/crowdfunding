@@ -1,10 +1,38 @@
 <div class="wrapper bg-white hero">
-  <img src="../../../assets/images/logo-mastercraft.svg" class="hero-master-logo mb-3" alt="mastercraft logo"/>
-  <h5 class="pt-3">Mastercraft Bamboo Monitor Riser</h5>
-  <p>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
-  <div class="call-action">
-    <app-rectangular-button></app-rectangular-button>
-    <app-circle-button></app-circle-button>
+  <img src="../../../assets/images/logo-mastercraft.svg" class="hero-master-logo mb-3" alt="mastercraft logo" />
+  <h5 class="mt-3 mastercraft header">Mastercraft Bamboo Monitor Riser</h5>
+  <p class="mastercraft">A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
+  <div class="call-action d-flex justify-content-between mastercraft">
+    <app-rectangular-button class="p-1" [buttonName]="'Back the project'" [buttonType]="'accept-button'">
+    </app-rectangular-button>
+    <app-circle-button class="p-1"></app-circle-button>
   </div>
 
+  <div class="analytics p-4 ml-5" *ngFor="let a of analyticsData;">
+    <app-dashboard-widget [amount]="a.amount" [total]="a.total"></app-dashboard-widget>
+  </div>
+  <div class="progress mb-3 text-left">
+    <div class="progress-bar bg-info rounded" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0"
+      aria-valuemax="100"></div>
+  </div>
+  <div class="feature text-left ">
+    <h6 class="header">About this project</h6>
+    <p class="text-left">The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your screen
+      to a more comfortable viewing height. Placing your monitor at eye level has the potential to improve
+      your posture and make you more comfortable while at work, helping you stay focused on the task at hand.</p>
+    <br>
+    <p class="text-left">Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your computer
+      to allow notepads, pens, and USB sticks to be stored under the stand.</p>
+      <div class="cards" *ngFor="let c of contentData;">
+        <app-card
+        [cardTitle]="c.cardTitle"
+        [cardSubTitle]="c.cardSubTitle"
+        [cardText]="c.cardText"
+        [cardNumber]="c.cardNumber"
+        [buttonName]="c.buttonName"
+        [buttonType]="c.buttonType"
+        ></app-card>
+      </div>
+
+  </div>
 </div>
