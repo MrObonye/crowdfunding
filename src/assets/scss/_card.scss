@@ -1,0 +1,29 @@
+@import './variables';
+
+.card {
+  margin: 4.3125rem;
+  &-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: $Black;
+    line-height: 11px;
+    padding-bottom: 0px;
+  }
+  &-sub-title {
+    color: $moderateCyan;
+    font-size: 1rem;
+    font-weight: 500;
+    padding-bottom: 20px;
+  }
+  &-text{
+    padding-bottom: 20px;
+  }
+  &-digits {
+    &-number {
+      color: $Black;
+      font-weight: 700;
+      padding-bottom: 20px;
+    }
+  }
+
+}

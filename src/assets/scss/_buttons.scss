@@ -3,10 +3,11 @@
 .btn {
   border-radius: 1.8125rem;
   border: none;
+  color: white;
 }
 .success-button {
   background-color: $moderateCyan;
-  color: white;
+
   opacity: 1;
   transition: 0.3s;
   &:hover {
@@ -37,6 +38,5 @@
 }
 .icon {
   font-size: 1rem;
-  font-weight: 200;
   color: $grayish;
 }

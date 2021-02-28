@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { RectangularButtonComponent } from './common';
-import { CircleButtonComponent } from './common/circle-button/circle-button.component';
+import { CardComponent } from './common/card/card.component';
+import { DashboardWidgetComponent } from './common/dashboard-widget/dashboard-widget.component';
 
 
-const routes: Routes = [{path: '', component: CircleButtonComponent }];
+const routes: Routes = [{path: '', component: CardComponent }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

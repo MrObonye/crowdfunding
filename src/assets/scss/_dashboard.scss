@@ -1,0 +1,22 @@
+@import "./variables";
+
+.widget {
+  display: block;
+  border: none;
+  height: 57px;
+  width: 126px;
+  line-height: 2px;
+  color: $black;
+  &__title {
+    font-size: 35px;
+    font-weight: 700;
+    color: $black;
+  }
+  &__text {
+    display: inline-block;
+    font-size: 0.835rem;
+    text-align: left;
+    color: $darkGray;
+    font-weight: 700;
+  }
+}
