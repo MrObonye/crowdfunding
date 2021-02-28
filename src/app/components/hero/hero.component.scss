@@ -1,0 +1,17 @@
+
+.hero {
+  position: absolute;
+  margin-top: -90px;
+  margin-left: 20px;
+  height: 400px;
+  width: 80%;
+  border-radius: 10px;
+  border: none;
+  overflow: none;
+  text-align: center;
+  &-master-logo {
+    position: absolute;
+    top: -22px;
+    left: 121px;
+  }
+}

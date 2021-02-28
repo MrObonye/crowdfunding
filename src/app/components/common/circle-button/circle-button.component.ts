@@ -3,9 +3,8 @@ import { faBookmark } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-circle-button',
-  template: `<button type="button" class="btn btn-circle" (click)="onClick">
-    <fa-icon [icon]="faBookMark" class="icon"></fa-icon>
-    </button>`,
+  template: `
+    <img src="./../../assets/images/icon-bookmark.svg" alt="bookmark icon" (click)="onClick">`,
 })
 export class CircleButtonComponent implements OnInit {
   @Output() bookmark = new EventEmitter();
