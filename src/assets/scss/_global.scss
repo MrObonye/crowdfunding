@@ -1,0 +1,50 @@
+@import "./variables";
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Commissioner", sans-serif;
+  font-weight: 400;
+  &.noscroll {
+    overflow: hidden;
+  }
+}
+.btn {
+  border-radius: 1.8125rem;
+  border: none;
+}
+.success-button {
+  background-color: $moderateCyan;
+  color: white;
+  opacity: 1;
+  transition: 0.3s;
+  &:hover {
+    opacity: 0.6;
+  }
+}
+.accept-button {
+  font-weight: 700;
+  background-color: $moderateCyan;
+  width: 13.1875rem;
+  height: 3.6875rem;
+}
+.card-button {
+  font-weight: 700;
+  background-color: $moderateCyan;
+  width: 9.625rem;
+  height: 2.9375rem;
+}
+.disabled-button {
+  background-color: $darkGray;
+  width: 9.625rem;
+  height: 2.9375rem;
+}
