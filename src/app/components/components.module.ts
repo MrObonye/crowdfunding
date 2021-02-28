@@ -1,15 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 import { ComponentsRoutingModule } from './components-routing.module';
-import { GreenButtonComponent } from './common/green-button/green-button.component';
+import { RectangularButtonComponent, CircleButtonComponent } from './common';
+
 
 
 @NgModule({
-  declarations: [GreenButtonComponent],
+  declarations: [RectangularButtonComponent, CircleButtonComponent],
   imports: [
     CommonModule,
-    ComponentsRoutingModule
+    ComponentsRoutingModule,
+    FontAwesomeModule
   ]
 })
 export class ComponentsModule { }

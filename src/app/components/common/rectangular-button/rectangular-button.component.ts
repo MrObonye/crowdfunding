@@ -1,11 +1,10 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-green-button',
-  template: `<button type="button" [ngClass]="styleButton()" (click)="onClick">{{buttonName}}</button>`,
-  styleUrls: ['./green-button.component.scss']
+  selector: 'app-rectangular-button',
+  template: `<button type="button" [ngClass]="styleButton()" (click)="onClick">{{buttonName}}</button>`
 })
-export class GreenButtonComponent implements OnInit {
+export class RectangularButtonComponent implements OnInit {
 
   @Output() pressButton = new EventEmitter();
   @Input() buttonName: string;
