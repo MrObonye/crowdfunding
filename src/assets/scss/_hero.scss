@@ -1,6 +1,9 @@
 @import "./dashboard";
 @import "./buttons";
 @import "./card";
+.cc {
+  background-color: whitesmoke;
+}
 
 .hero {
   // position: relative;
@@ -28,10 +31,10 @@
   padding-bottom: 29px;
 }
 .header {
-  padding: 29px;
+  // padding: 29px;
   font-weight: 700;
   font-size: 21px;
-  text-align: center;
+  // text-align: center;
   color: black;
 }
 .analytics {

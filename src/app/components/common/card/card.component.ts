@@ -3,7 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 @Component({
   selector: 'app-card',
   template: `
-  <div class="card" style="width: 259px; height: 325px;">
+    <div class="p-4" >
   <h5 class="card-title">{{ cardTitle }}</h5>
   <h5 class="card-sub-title">{{cardSubTitle}}</h5>
   <div class="card-text">{{cardText}}</div>
@@ -11,10 +11,10 @@ import { Component, Input, OnInit } from '@angular/core';
       <h1 class="card-digits-number">{{cardNumber}}</h1>
       <p class="card-digits-text p-2 m-1">left</p>
   </div>
-  <app-rectangular-button
-  [buttonName]="buttonName"
-  [buttonType]="buttonType">
-</app-rectangular-button>
+    <app-rectangular-button class="mb-3"
+    [buttonName]="buttonName"
+    [buttonType]="buttonType">
+    </app-rectangular-button>
   </div>`,
 })
 export class CardComponent implements OnInit {
