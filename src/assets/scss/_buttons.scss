@@ -10,9 +10,10 @@
   }
 }
 .accept-button {
+
   font-weight: 700;
   background-color: $moderateCyan;
-  width: 13.1875rem;
+  width: 11.75rem;
   height: 3.6875rem;
   border-radius: 1.8125rem;
   border: none;
@@ -33,14 +34,11 @@
   height: 2.9375rem;
 }
 .btn-circle {
+  position: relative;
   background-color: $blackGray;
   width: 54px;
   height: 54px;
   border-radius: 1.8125rem;
   border: none;
   color: white;
-}
-.icon {
-  font-size: 1rem;
-  color: $grayish;
 }

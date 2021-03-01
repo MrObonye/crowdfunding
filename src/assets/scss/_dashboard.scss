@@ -2,9 +2,11 @@
 
 .widget {
   display: block;
+  position: relative;
   border: none;
   height: 57px;
-  width: 126px;
+  width: 100%;
+  text-align: center;
   line-height: 2px;
   color: $black;
   &__title {
