@@ -60,14 +60,15 @@
 
     </div>
     <div class="row">
-      <app-pledge [cardTitle]="'c.cardTitle'" [cardSubTitle]="'c.cardSubTitle'" [cardText]="'c.cardText'"
-      [cardNumber]="'c.cardNumber'" [index]="1" (enableBorder)="select($event)" [selected]="selected"></app-pledge>
-      <app-pledge [cardTitle]="'c.cardTitle'" [cardSubTitle]="'c.cardSubTitle'" [cardText]="'c.cardText'"
-      [cardNumber]="'c.cardNumber'" [index]="2" (enableBorder)="select($event)" [selected]="selected"></app-pledge>
-      <app-pledge [cardTitle]="'c.cardTitle'" [cardSubTitle]="'c.cardSubTitle'" [cardText]="'c.cardText'"
-      [cardNumber]="'c.cardNumber'" [index]="3" (enableBorder)="select($event)" [selected]="selected"></app-pledge>
-      <app-pledge [cardTitle]="'c.cardTitle'" [cardSubTitle]="'c.cardSubTitle'" [cardText]="'c.cardText'"
-      [cardNumber]="'c.cardNumber'" [index]="4" (enableBorder)="select($event)" [selected]="selected"></app-pledge>
+      <app-pledge [cardTitle]="'Pledge with no reward'" [cardSubTitle]="''" [cardText]="' Choose to support us without a reward if you simply believe in our project. As a backer,\
+      you will be signed up to receive product updates via email.'"
+      [cardNumber]="-1" [index]="1" (enableBorder)="select($event)" [selected]="selected"></app-pledge>
+      <app-pledge [cardTitle]="contentData[0].cardTitle" [cardSubTitle]="contentData[0].cardSubTitle" [cardText]="contentData[0].cardText"
+      [cardNumber]="contentData[0].cardNumber" [index]="2" (enableBorder)="select($event)" [selected]="selected"></app-pledge>
+      <app-pledge [cardTitle]="contentData[1].cardTitle" [cardSubTitle]="contentData[1].cardSubTitle" [cardText]="contentData[1].cardText"
+      [cardNumber]="contentData[1].cardNumber" [index]="3" (enableBorder)="select($event)" [selected]="selected"></app-pledge>
+      <app-pledge [cardTitle]="contentData[2].cardTitle" [cardSubTitle]="contentData[2].cardSubTitle" [cardText]="contentData[2].cardText"
+      [cardNumber]="contentData[2].cardNumber" [index]="4" (enableBorder)="select($event)" [selected]="selected"></app-pledge>
     </div>
   </div>
 

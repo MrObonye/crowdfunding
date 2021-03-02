@@ -17,7 +17,7 @@
   <div class="row text-left">
     <div class="card-text">{{cardText}}</div>
   </div>
-  <div class="card-digits row m-0">
+  <div class="card-digits row m-0" *ngIf="cardNumber >= 0">
     <h1 class="card-digits-number h5">{{cardNumber}}</h1>
     <p class="mx-2">left</p>
   </div>
@@ -29,6 +29,28 @@
       <i>$</i>
     </div>
 
-   <button type="submit" class="continue-button">continue</button>
+   <button type="button" class="continue-button" (click)="submit()">continue</button>
   </div>
 </div>
+
+<app-modal id="custom-modal-2" class="rounded">
+  <div class="col text-center">
+    <div class="col">
+      <img class="text-center" src="../../assets/images/icon-check.svg" alt="check icon">
+    </div>
+    <div class="col text-center ">
+      <h5 class="fw-bolder my-3">Thanks for your support!</h5>
+    </div>
+    <div class="col my-3">
+      <p class="my-3"> Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
+        an email once our campaign is completed.</p>
+    </div>
+    <div class="col text-center my-3">
+      <button class="continue-button my-3" (click)="closeModal('custom-modal-2')">Got it!</button>
+    </div>
+
+
+
+  </div>
+
+</app-modal>
