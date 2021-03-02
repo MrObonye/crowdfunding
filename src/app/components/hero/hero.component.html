@@ -6,7 +6,11 @@
       <h5 class="mastercraft header">Mastercraft Bamboo Monitor Riser</h5>
       <p class="mastercraft">A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
       <div class="row mb-3">
-        <app-rectangular-button class="col p-0" [buttonName]="'Back the project'" [buttonType]="'accept-button'">
+        <app-rectangular-button
+        (click)="openModal('custom-modal-1')"
+        class="col p-0"
+        [buttonName]="'Back the project'"
+        [buttonType]="'accept-button'">
         </app-rectangular-button>
         <div class="col-3 p-0"><img class="m-0" src="./../../assets/images/icon-bookmark.svg" alt="bookmark icon">
         </div>
@@ -44,25 +48,27 @@
   </div>
 </div>
 
-
-<!--
-
-
-
-  <div class="feature text-left ">
-    <h6 class="header">About this project</h6>
-    <p class="text-left">The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your screen
-      to a more comfortable viewing height. Placing your monitor at eye level has the potential to improve
-      your posture and make you more comfortable while at work, helping you stay focused on the task at hand.</p>
-    <br>
-    <p class="text-left">Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your
-      computer
-      to allow notepads, pens, and USB sticks to be stored under the stand.</p>
-    <div class="cards" *ngFor="let c of contentData;">
-      <app-card [cardTitle]="c.cardTitle" [cardSubTitle]="c.cardSubTitle" [cardText]="c.cardText"
-        [cardNumber]="c.cardNumber" [buttonName]="c.buttonName" [buttonType]="c.buttonType"></app-card>
+<app-modal id="custom-modal-1">
+  <div class="container-fluid">
+    <div class="row d-flex flex-direction-column justify-content-between mb-2">
+      <h5 class="text-left fw-bolder mt-2 float-left">Back this project</h5>
+      <a class="close custom-modal__close float-right" (click)="closeModal('custom-modal-1');">&times;</a>
     </div>
 
+    <div class="row text-left">
+      <p>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
+
+    </div>
+    <div class="row">
+      <app-pledge [cardTitle]="'c.cardTitle'" [cardSubTitle]="'c.cardSubTitle'" [cardText]="'c.cardText'"
+      [cardNumber]="'c.cardNumber'" [index]="1" (enableBorder)="select($event)" [selected]="selected"></app-pledge>
+      <app-pledge [cardTitle]="'c.cardTitle'" [cardSubTitle]="'c.cardSubTitle'" [cardText]="'c.cardText'"
+      [cardNumber]="'c.cardNumber'" [index]="2" (enableBorder)="select($event)" [selected]="selected"></app-pledge>
+      <app-pledge [cardTitle]="'c.cardTitle'" [cardSubTitle]="'c.cardSubTitle'" [cardText]="'c.cardText'"
+      [cardNumber]="'c.cardNumber'" [index]="3" (enableBorder)="select($event)" [selected]="selected"></app-pledge>
+      <app-pledge [cardTitle]="'c.cardTitle'" [cardSubTitle]="'c.cardSubTitle'" [cardText]="'c.cardText'"
+      [cardNumber]="'c.cardNumber'" [index]="4" (enableBorder)="select($event)" [selected]="selected"></app-pledge>
+    </div>
   </div>
-</div>
- -->
+
+</app-modal>

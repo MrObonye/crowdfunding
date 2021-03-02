@@ -11,6 +11,9 @@ import { HomeComponent } from './home/home.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeroComponent } from './hero/hero.component';
+import { ModalComponent } from './modal/modal.component';
+import { PledgeComponent } from './common/pledge/pledge.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -22,12 +25,15 @@ import { HeroComponent } from './hero/hero.component';
     CardComponent,
     HomeComponent,
     NavbarComponent,
-    HeroComponent
+    HeroComponent,
+    ModalComponent,
+    PledgeComponent
   ],
   imports: [
     CommonModule,
     ComponentsRoutingModule,
     FontAwesomeModule,
+    FormsModule,
     NgbModule
   ]
 })

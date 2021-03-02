@@ -1,0 +1,34 @@
+<div class="p-4 my-2 rounded" [ngStyle]="{'border': index === selected ? 'solid 2px hsl(176, 50%, 47%)' : 'solid 2px gray'}">
+  <div class="row">
+    <div class="form-check col-2 p-1">
+      <input class="form-check-input"
+      (change)="select(index)"
+      type="radio"
+      #pledge
+      name="pledge"
+      id="pledge">
+    </div>
+    <div class="row text-left mx-2">
+      <h5 class="card-title col-sm-10">{{ cardTitle }}</h5>
+      <h5 class="card-sub-title col-sm-10">{{cardSubTitle}}</h5>
+    </div>
+
+  </div>
+  <div class="row text-left">
+    <div class="card-text">{{cardText}}</div>
+  </div>
+  <div class="card-digits row m-0">
+    <h1 class="card-digits-number h5">{{cardNumber}}</h1>
+    <p class="mx-2">left</p>
+  </div>
+  <hr class="w-100">
+  <div class="row d-flex justify-content-between p-3" *ngIf="index === selected">
+    <p class="col-12">Enter your pledge</p>
+    <div class="input-icon">
+      <input type="text" class="input">
+      <i>$</i>
+    </div>
+
+   <button type="submit" class="continue-button">continue</button>
+  </div>
+</div>

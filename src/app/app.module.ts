@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SelectedDirective } from './directives/selected.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SelectedDirective
   ],
   imports: [
     BrowserModule,
@@ -19,6 +21,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     FontAwesomeModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [SelectedDirective]
 })
 export class AppModule { }
