@@ -10,7 +10,6 @@
   }
 }
 .accept-button {
-
   font-weight: 700;
   background-color: $moderateCyan;
   width: 11.75rem;
@@ -63,7 +62,22 @@
     padding-left: 0px;
     text-align: left;
     &::after {
-      content: 'Bookmark';
+      content: "Bookmark";
+      padding-left: 4px;
+      color: gray;
+      font-weight: 700;
+    }
+
+  }
+  @include breakpoints-up(medium) {
+    width: 11.75rem;
+    height: 3.5875rem;
+    border-radius: 85px;
+    border: none;
+    padding-left: 0px;
+    text-align: left;
+    &::after {
+      content: "Bookmark";
       padding-left: 4px;
       color: gray;
       font-weight: 700;

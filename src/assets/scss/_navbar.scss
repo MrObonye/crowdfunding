@@ -12,10 +12,11 @@
   }
 }
 .navbar {
-  right: 165px;
+  // right: 165px;
 }
 .list-group {
   background-color: white;
+
 
   .nav-link {
     border-bottom: solid 1px rgb(185, 185, 185);
@@ -23,11 +24,18 @@
       border: none;
     }
     //add responsiveness for medium sized views
-    
+    @include breakpoints-up(medium) {
+      border: none;
+
+    }
+
     a {
       padding: 10px;
       margin-left: 10px;
       text-decoration: none;
+      @include breakpoints-up(medium) {
+        color: white;
+      }
     }
   }
   @include breakpoints-up(large) {
@@ -36,13 +44,16 @@
   }
   // edit the medium screen
   @include breakpoints-up(medium) {
-    margin-right: 10.3125rem;
+    margin-right: 1.5rem;
     background-color: transparent;
   }
 }
 .navbar-brand {
   @include breakpoints-up(large) {
     margin-left: 10.3125rem;
+  }
+  @include breakpoints-up(medium) {
+    margin-left: 1.5rem;
   }
 }
 
@@ -74,6 +85,9 @@
     :hover {
       color: black;
     }
+  }
+  @include breakpoints-up(medium) {
+    padding: 10px;
   }
 }
 .nav-link > a:hover {
