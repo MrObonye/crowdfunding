@@ -1,5 +1,5 @@
 <div #hasFade class="has-fade"></div>
-<nav class="navbar navbar-expand-md  fixed-top" #navbar>
+<nav class="navbar navbar-expand-md fixed-top" #navbar>
   <a class="navbar-brand" href="#"><img src="./../../../assets/images/logo.svg" alt="logo">
   </a>
   <a class="navbar-toggler hidden-sm-up"
@@ -9,15 +9,15 @@
     <img #mobileMenuIcon src="./../../../assets/images/icon-hamburger.svg" alt="icon" >
 </a>
   <div #menu [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse pt-4" id="navbarsDefault">
-    <ul class="navbar-nav mr-auto list-group">
-      <li class="nav-item dropdown list-group-item list-group-item-action">
-        <a class="text-dark fw-bolder" href="#">About</a>
+    <ul class="navbar-nav list-group ml-auto">
+      <li class="nav-link">
+        <a class="fw-bolder" href="#">About</a>
       </li>
-      <li class="nav-item list-group-item list-group-item-action">
-        <a class="text-dark fw-bolder" href="#">Discover</a>
+      <li class="nav-link">
+        <a class="fw-bolder" href="#">Discover</a>
       </li>
-      <li class="nav-item list-group-item list-group-item-action">
-        <a class="text-dark fw-bolder" href="#">Get Started</a>
+      <li class="nav-link">
+        <a class="fw-bolder" href="#">Get Started</a>
       </li>
     </ul>
   </div>

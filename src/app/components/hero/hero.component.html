@@ -12,31 +12,37 @@
         [buttonName]="'Back the project'"
         [buttonType]="'accept-button'">
         </app-rectangular-button>
-        <div class="col-3 p-0"><img class="m-0" src="./../../assets/images/icon-bookmark.svg" alt="bookmark icon">
+        <div class="col-3 col-lg-6 p-0">
+          <button class="bookmark d-lg-inline d-md-inline d-none"><img class="m-0 pr-1" src="./../../assets/images/icon-bookmark.svg" alt="bookmark icon">
+          </button>
+          <img class="m-0 pr-1 d-sm-none" src="./../../assets/images/icon-bookmark.svg" alt="bookmark icon">
         </div>
 
       </div>
     </div>
   </div>
-  <div class="row m-1 pt-3">
-    <div class="col-sm-12 shadow-sm ">
-      <app-dashboard-widget *ngFor="let a of analyticsData;" [amount]="a.amount" [total]="a.total" class="p-3">
-      </app-dashboard-widget>
+  <div class="row m-1 mt-3 pt-3 bg-white shadow-sm">
+    <!-- <div class="col-sm-12 shadow-sm "> -->
+      <div class="col-lg-4 col-12"*ngFor="let a of analyticsData;">
+        <app-dashboard-widget class=""  [amount]="a.amount" [total]="a.total" class="p-3">
+        </app-dashboard-widget>
+      </div>
 
-      <div class="progress mb-3 text-left">
+
+      <div class="progress mb-3 col mx-3">
         <div class="progress-bar bg-info rounded" role="progressbar" style="width: 75%" aria-valuenow="75"
           aria-valuemin="0" aria-valuemax="100"></div>
       </div>
-    </div>
+    <!-- </div> -->
   </div>
-  <div class="row m-1 pt-3">
+  <div class="row m-1 pt-3 bg-white mt-3">
     <div class="col-sm-12 shadow-sm">
-      <h6 class="header text-left py-2">About this project</h6>
-      <p class="text-left">The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your screen
+      <h6 class="header text-left py-2 col-12">About this project</h6>
+      <p class="text-left col-12">The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your screen
         to a more comfortable viewing height. Placing your monitor at eye level has the potential to improve
         your posture and make you more comfortable while at work, helping you stay focused on the task at hand.</p>
       <br>
-      <p class="text-left">Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your
+      <p class="text-left col-12">Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your
         computer
         to allow notepads, pens, and USB sticks to be stored under the stand.</p>
       <div class="border my-3 rounded" *ngFor="let c of contentData;">

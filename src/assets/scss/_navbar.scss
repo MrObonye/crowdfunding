@@ -3,9 +3,49 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 400px;
+  height: 410px;
+  border: none;
   margin-top: -1.875rem;
+  @include breakpoints-up(large) {
+    margin-top: 0px;
+    background-image: url(src/assets/images/image-hero-desktop.jpg);
+  }
 }
+.navbar {
+  right: 165px;
+}
+.list-group {
+  background-color: white;
+
+  .nav-link {
+    border-bottom: solid 1px rgb(185, 185, 185);
+    @include breakpoints-up(large) {
+      border: none;
+    }
+    //add responsiveness for medium sized views
+    
+    a {
+      padding: 10px;
+      margin-left: 10px;
+      text-decoration: none;
+    }
+  }
+  @include breakpoints-up(large) {
+    margin-right: 10.3125rem;
+    background-color: transparent;
+  }
+  // edit the medium screen
+  @include breakpoints-up(medium) {
+    margin-right: 10.3125rem;
+    background-color: transparent;
+  }
+}
+.navbar-brand {
+  @include breakpoints-up(large) {
+    margin-left: 10.3125rem;
+  }
+}
+
 .navbar-background {
   background-color: black;
 }
@@ -23,4 +63,19 @@
   background-image: linear-gradient($Black, transparent);
 }
 
+.nav-link > a {
+  color: $Black;
+  text-decoration: none;
 
+  @include breakpoints-up(large) {
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+    :hover {
+      color: black;
+    }
+  }
+}
+.nav-link > a:hover {
+  color: $Black;
+}
