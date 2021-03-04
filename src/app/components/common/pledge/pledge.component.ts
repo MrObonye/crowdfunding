@@ -15,6 +15,7 @@ export class PledgeComponent implements OnInit {
 
   @Input() index: number;
   @Input() selected: number;
+  
 
   @Output() enableBorder = new EventEmitter();
   constructor(private modalService: ModalService) { }
