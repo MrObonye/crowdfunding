@@ -12,11 +12,20 @@
   }
 }
 .navbar {
-  // right: 165px;
+  .navbar-brand {
+    @include breakpoints-up(large) {
+      margin-left: 10.3125rem;
+      background-color: transparent;
+    }
+    @include breakpoints-up(medium) {
+      // margin-left: 3.3125rem;
+      background-color: transparent;
+    }
+  }
 }
+
 .list-group {
   background-color: white;
-
 
   .nav-link {
     border-bottom: solid 1px rgb(185, 185, 185);
@@ -26,7 +35,6 @@
     //add responsiveness for medium sized views
     @include breakpoints-up(medium) {
       border: none;
-
     }
 
     a {
@@ -44,16 +52,8 @@
   }
   // edit the medium screen
   @include breakpoints-up(medium) {
-    margin-right: 1.5rem;
+    // margin-right: 3.3125rem;
     background-color: transparent;
-  }
-}
-.navbar-brand {
-  @include breakpoints-up(large) {
-    margin-left: 10.3125rem;
-  }
-  @include breakpoints-up(medium) {
-    margin-left: 1.5rem;
   }
 }
 

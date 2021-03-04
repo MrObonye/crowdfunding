@@ -13,7 +13,6 @@ import { Component, Input, OnInit } from '@angular/core';
   <div class="row">
   <div class="card-digits row col-lg-6 m-0">
       <h1 class="card-digits-number">{{cardNumber}}</h1>
-      <p class="card-digits-text p-2 m-1">left</p>
   </div>
   <div class="col-lg-6">
   <app-rectangular-button class="mb-3"
