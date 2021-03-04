@@ -1,0 +1,81 @@
+<div class="col-sm-12 position-relative">
+  <div class="row m-1">
+    <div class="col-sm-12 bg-white hero shadow-sm rounded text-center">
+      <img src="../../../assets/images/logo-mastercraft.svg"
+        class=" hero-master-logo position-relative translate-middle" alt="mastercraft logo" />
+      <h5 class="mastercraft header">Mastercraft Bamboo Monitor Riser</h5>
+      <p class="mastercraft">A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
+      <div class="row mb-3">
+        <app-rectangular-button
+        (click)="openModal('custom-modal-1')"
+        class="col p-0"
+        [buttonName]="'Back the project'"
+        [buttonType]="'accept-button'">
+        </app-rectangular-button>
+        <div class="col-3 col-lg-6 col-md-6 p-0">
+          <button class="bookmark d-lg-inline d-md-inline d-none"><img class="m-0 pr-1" src="./../../assets/images/icon-bookmark.svg" alt="bookmark icon">
+          </button>
+          <img class="m-0 pr-1 d-sm-none" src="./../../assets/images/icon-bookmark.svg" alt="bookmark icon">
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="row m-1 mt-3 pt-3 bg-white shadow-sm">
+    <!-- <div class="col-sm-12 shadow-sm "> -->
+      <div class="col-lg-4 col-12"*ngFor="let a of analyticsData;">
+        <app-dashboard-widget class=""  [amount]="a.amount" [total]="a.total" class="p-3">
+        </app-dashboard-widget>
+      </div>
+
+
+      <div class="progress mb-3 col mx-3">
+        <div class="progress-bar bg-info rounded" role="progressbar" style="width: 75%" aria-valuenow="75"
+          aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+    <!-- </div> -->
+  </div>
+  <div class="row m-1 pt-3 bg-white mt-3">
+    <div class="col-sm-12 shadow-sm">
+      <h6 class="header text-left py-2 col-12">About this project</h6>
+      <p class="text-left col-12">The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your screen
+        to a more comfortable viewing height. Placing your monitor at eye level has the potential to improve
+        your posture and make you more comfortable while at work, helping you stay focused on the task at hand.</p>
+      <br>
+      <p class="text-left col-12">Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your
+        computer
+        to allow notepads, pens, and USB sticks to be stored under the stand.</p>
+      <div class="border my-3 rounded" *ngFor="let c of contentData;">
+        <app-card class=""  [cardTitle]="c.cardTitle" [cardSubTitle]="c.cardSubTitle" [cardText]="c.cardText"
+          [cardNumber]="c.cardNumber" [buttonName]="c.buttonName" [buttonType]="c.buttonType"></app-card>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<app-modal id="custom-modal-1">
+  <div class="container-fluid">
+    <div class="row d-flex flex-direction-column justify-content-between mb-2">
+      <h5 class="text-left fw-bolder mt-2 float-left">Back this project</h5>
+      <a class="close custom-modal__close float-right" (click)="closeModal('custom-modal-1');">&times;</a>
+    </div>
+
+    <div class="row text-left">
+      <p>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
+
+    </div>
+    <div class="row">
+      <app-pledge [cardTitle]="'Pledge with no reward'" [cardSubTitle]="''" [cardText]="'Choose to support us without a reward if you simply believe in our project. As a backer,\
+      you will be signed up to receive product updates via email.'"
+      [cardNumber]="-1" [index]="1" (enableBorder)="select($event)" [selected]="selected"></app-pledge>
+      <app-pledge [cardTitle]="contentData[0].cardTitle" [cardSubTitle]="contentData[0].cardSubTitle" [cardText]="contentData[0].cardText"
+      [cardNumber]="contentData[0].cardNumber" [index]="2" (enableBorder)="select($event)" [selected]="selected"></app-pledge>
+      <app-pledge [cardTitle]="contentData[1].cardTitle" [cardSubTitle]="contentData[1].cardSubTitle" [cardText]="contentData[1].cardText"
+      [cardNumber]="contentData[1].cardNumber" [index]="3" (enableBorder)="select($event)" [selected]="selected"></app-pledge>
+      <app-pledge [cardTitle]="contentData[2].cardTitle" [cardSubTitle]="contentData[2].cardSubTitle" [cardText]="contentData[2].cardText"
+      [cardNumber]="contentData[2].cardNumber" [index]="4" (enableBorder)="select($event)" [selected]="selected" style="pointer-events: none; opacity: 0.3;"></app-pledge>
+    </div>
+  </div>
+
+</app-modal>

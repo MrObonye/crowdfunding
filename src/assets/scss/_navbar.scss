@@ -1,0 +1,95 @@
+.cover {
+  background-image: url(src/assets/images/image-hero-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 410px;
+  border: none;
+  margin-top: -1.875rem;
+  @include breakpoints-up(large) {
+    margin-top: 0px;
+    background-image: url(src/assets/images/image-hero-desktop.jpg);
+  }
+}
+.navbar {
+  .navbar-brand {
+    @include breakpoints-up(large) {
+      margin-left: 10.3125rem;
+      background-color: transparent;
+    }
+    @include breakpoints-up(medium) {
+      // margin-left: 3.3125rem;
+      background-color: transparent;
+    }
+  }
+}
+
+.list-group {
+  background-color: white;
+
+  .nav-link {
+    border-bottom: solid 1px rgb(185, 185, 185);
+    @include breakpoints-up(large) {
+      border: none;
+    }
+    //add responsiveness for medium sized views
+    @include breakpoints-up(medium) {
+      border: none;
+    }
+
+    a {
+      padding: 10px;
+      margin-left: 10px;
+      text-decoration: none;
+      @include breakpoints-up(medium) {
+        color: white;
+      }
+    }
+  }
+  @include breakpoints-up(large) {
+    margin-right: 10.3125rem;
+    background-color: transparent;
+  }
+  // edit the medium screen
+  @include breakpoints-up(medium) {
+    // margin-right: 3.3125rem;
+    background-color: transparent;
+  }
+}
+
+.navbar-background {
+  background-color: black;
+}
+.fw-bolder {
+  font-weight: 700;
+}
+.overlay {
+  position: fixed;
+  opacity: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+  background-image: linear-gradient($Black, transparent);
+}
+
+.nav-link > a {
+  color: $Black;
+  text-decoration: none;
+
+  @include breakpoints-up(large) {
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+    :hover {
+      color: black;
+    }
+  }
+  @include breakpoints-up(medium) {
+    padding: 10px;
+  }
+}
+.nav-link > a:hover {
+  color: $Black;
+}

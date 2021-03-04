@@ -10,9 +10,7 @@ import { map } from 'rxjs/operators';
 })
 export class AppComponent implements OnInit{
   title = 'crowfunding';
-  count = 0;
   ngOnInit() {
-    this.count++;
   }
 
 }

@@ -1,0 +1,131 @@
+@import "./../../../../assets/scss/variables";
+@import "./../../../../assets/scss/mixins";
+
+.input {
+  border-radius: 1.8125rem;
+  height: 2.9375rem;
+  width: 6.4375rem;
+  border: solid 1px gray;
+}
+.input-icon {
+  position: relative;
+}
+
+.input-icon > i {
+  position: absolute;
+  display: block;
+  transform: translate(0, -50%);
+  top: 50%;
+  pointer-events: none;
+  width: 25px;
+  text-align: center;
+  font-style: normal;
+}
+
+.input-icon > input {
+  padding-left: 25px;
+  padding-right: 0;
+}
+
+.input-icon-right > i {
+  right: 0;
+}
+
+.input-icon-right > input {
+  padding-left: 0;
+  padding-right: 25px;
+  text-align: right;
+}
+.green {
+  border: solid 1px $moderateCyan;
+  border-color: $moderateCyan;
+}
+
+.wrapper {
+  .grid-item1 {
+    grid-area: radio-button;
+    text-align: left;
+  }
+  .grid-item2 {
+    grid-area: card-title;
+    text-align: left;
+    // width: 10.5rem;
+    @include breakpoints-up(large) {
+      width: 80%;
+    }
+    @include breakpoints-down(small) {
+      width: 10.5rem;
+    }
+  }
+  .grid-item3 {
+    grid-area: sub-title;
+    text-align: left;
+    /* @include breakpoints-up(large) {
+      width: 80%;
+    }
+    @include breakpoints-up(medium) {
+      width: 80%;
+    } */
+  }
+  .grid-item4 {
+    grid-area: pledge-count;
+
+    text-align: left;
+    @include breakpoints-up(large) {
+      text-align: right;
+       place-items: end;
+    }
+    @include breakpoints-up(medium) {
+      text-align: right;
+      place-items: end;
+    }
+  }
+  .grid-item5 {
+    grid-area: pledge-desc;
+    border-bottom: solid 1px gray;
+    text-align: left;
+  }
+  .grid-item6 {
+    grid-area: pledge-label;
+    text-align: left;
+    padding-top: 25px;
+  }
+  .grid-item7 {
+    grid-area: input-box;
+    text-align: right;
+    padding-top: 25px;
+  }
+
+  @include breakpoints-up(large) {
+    display: grid;
+    grid-template-areas:
+      "radio-button card-title sub-title pledge-count"
+      "radio-button pledge-desc pledge-desc pledge-desc"
+      "pledge-label pledge-label pledge-label input-box ";
+
+    .grid-item {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+  }
+  @include breakpoints-up(medium) {
+    display: grid;
+    grid-template-areas:
+      "radio-button card-title sub-title pledge-count"
+      "radio-button pledge-desc pledge-desc pledge-desc"
+      "pledge-label pledge-label input-box input-box ";
+
+    .grid-item {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+  }
+  @include breakpoints-down(small) {
+    display: grid;
+    grid-template-areas:
+      "radio-button card-title "
+      "radio-button sub-title "
+      "pledge-desc pledge-desc"
+      "pledge-count pledge-count"
+      "pledge-label pledge-label"
+      "input-box input-box ";
+  }
+}
