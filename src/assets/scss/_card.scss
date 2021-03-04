@@ -23,6 +23,11 @@
       color: $Black;
       font-weight: 700;
       padding-bottom: 20px;
+      &::after {
+        content: 'left';
+        font-weight: 400;
+        padding: 5px;
+      }
     }
   }
 
