@@ -16,24 +16,24 @@ app-modal {
     bottom: 0;
     left: 0;
 
-    @include breakpoints-up(large) {
+   /*  @include breakpoints-up(large) {
       left: 50%;
       top: 5%;
 
-      width: 75%;
+      width: 45%;
       height: 100vh;
       overflow-y: auto;
       // margin: 40px auto;
       // margin-left: -353px;
       // margin-right: 353px;
       transform: translateX(-50%);
-    }
+    } */
 
     @include breakpoints-up(medium) {
       left: 50%;
       top: 5%;
 
-      width: 75%;
+      width: 45%;
       height: 100vh;
       overflow-y: auto;
       // margin: 40px auto;
