@@ -13,14 +13,15 @@
 }
 .navbar {
   .navbar-brand {
-    @include breakpoints-up(large) {
-      margin-left: 10.3125rem;
-      background-color: transparent;
-    }
+
     @include breakpoints-up(medium) {
-      // margin-left: 3.3125rem;
+      margin-left: 3.3125rem;
       background-color: transparent;
     }
+  }
+  @include breakpoints-up(large) {
+    margin-left: 10.3125rem;
+    background-color: transparent;
   }
 }
 
@@ -28,14 +29,15 @@
   background-color: white;
 
   .nav-link {
+    @include breakpoints-up(medium) {
+      border: none;
+    }
     border-bottom: solid 1px rgb(185, 185, 185);
     @include breakpoints-up(large) {
       border: none;
     }
     //add responsiveness for medium sized views
-    @include breakpoints-up(medium) {
-      border: none;
-    }
+
 
     a {
       padding: 10px;
@@ -46,15 +48,16 @@
       }
     }
   }
+  @include breakpoints-up(medium) {
+    // margin-right: 3.3125rem;
+    background-color: transparent;
+  }
   @include breakpoints-up(large) {
     margin-right: 10.3125rem;
     background-color: transparent;
   }
   // edit the medium screen
-  @include breakpoints-up(medium) {
-    // margin-right: 3.3125rem;
-    background-color: transparent;
-  }
+
 }
 
 .navbar-background {
@@ -77,7 +80,9 @@
 .nav-link > a {
   color: $Black;
   text-decoration: none;
-
+  @include breakpoints-up(medium) {
+    padding: 10px;
+  }
   @include breakpoints-up(large) {
     padding: 20px;
     color: white;
@@ -86,9 +91,7 @@
       color: black;
     }
   }
-  @include breakpoints-up(medium) {
-    padding: 10px;
-  }
+
 }
 .nav-link > a:hover {
   color: $Black;

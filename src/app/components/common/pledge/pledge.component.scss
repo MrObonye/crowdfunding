@@ -50,12 +50,12 @@
     grid-area: card-title;
     text-align: left;
     // width: 10.5rem;
-    @include breakpoints-up(large) {
+    /* @include breakpoints-up(large) {
       width: 80%;
     }
     @include breakpoints-down(small) {
       width: 10.5rem;
-    }
+    } */
   }
   .grid-item3 {
     grid-area: sub-title;
@@ -71,13 +71,14 @@
     grid-area: pledge-count;
 
     text-align: left;
-    @include breakpoints-up(large) {
-      text-align: right;
-       place-items: end;
-    }
+
     @include breakpoints-up(medium) {
       text-align: right;
-      place-items: end;
+      // place-items: end;
+    }
+    @include breakpoints-up(large) {
+      text-align: right;
+      //  place-items: end;
     }
   }
   .grid-item5 {
@@ -95,29 +96,6 @@
     text-align: right;
     padding-top: 25px;
   }
-
-  @include breakpoints-up(large) {
-    display: grid;
-    grid-template-areas:
-      "radio-button card-title sub-title pledge-count"
-      "radio-button pledge-desc pledge-desc pledge-desc"
-      "pledge-label pledge-label pledge-label input-box ";
-
-    .grid-item {
-      background-color: rgba(255, 255, 255, 0.8);
-    }
-  }
-  @include breakpoints-up(medium) {
-    display: grid;
-    grid-template-areas:
-      "radio-button card-title sub-title pledge-count"
-      "radio-button pledge-desc pledge-desc pledge-desc"
-      "pledge-label pledge-label input-box input-box ";
-
-    .grid-item {
-      background-color: rgba(255, 255, 255, 0.8);
-    }
-  }
   @include breakpoints-down(small) {
     display: grid;
     grid-template-areas:
@@ -128,4 +106,32 @@
       "pledge-label pledge-label"
       "input-box input-box ";
   }
+
+@include breakpoints-up(medium) {
+  display: grid;
+  width: 28.125rem;
+  grid-template-areas:
+    "radio-button card-title sub-title pledge-count"
+    "radio-button pledge-desc pledge-desc pledge-desc"
+    "pledge-label pledge-label input-box input-box ";
+
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
 }
+
+  @include breakpoints-up(large) {
+    display: grid;
+    width: 43.0625rem;
+    grid-template-areas:
+      "radio-button card-title sub-title pledge-count"
+      "radio-button pledge-desc pledge-desc pledge-desc"
+      "pledge-label pledge-label pledge-label input-box ";
+
+    .grid-item {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+  }
+}
+
+
