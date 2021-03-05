@@ -10,6 +10,7 @@ app-modal {
 
   .app-modal {
     /* modal container fixed across whole screen */
+    animation: fadein 1s forwards;
     position: fixed;
     top: 10%;
     right: 0;
