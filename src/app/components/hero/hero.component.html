@@ -38,14 +38,14 @@
   <div class="row m-1 pt-3 bg-white mt-3">
     <div class="col-sm-12 shadow-sm">
       <h6 class="header text-left py-2 col-12">About this project</h6>
-      <p class="text-left col-12">The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your screen
+      <p class="text-left col-12 grey-text">The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your screen
         to a more comfortable viewing height. Placing your monitor at eye level has the potential to improve
         your posture and make you more comfortable while at work, helping you stay focused on the task at hand.</p>
       <br>
-      <p class="text-left col-12">Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your
+      <p class="text-left col-12 grey-text">Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your
         computer
         to allow notepads, pens, and USB sticks to be stored under the stand.</p>
-      <div class="border my-3 rounded" *ngFor="let c of contentData;" [ngStyle]="styleBorder(c.buttonType)">
+      <div class="my-3 wrapper grey-text" *ngFor="let c of contentData;" [ngStyle]="styleBorder(c.buttonType)">
         <app-card class=""  [cardTitle]="c.cardTitle" [cardSubTitle]="c.cardSubTitle" [cardText]="c.cardText"
           [cardNumber]="c.cardNumber" [buttonName]="c.buttonName" [buttonType]="c.buttonType"></app-card>
       </div>
