@@ -76,6 +76,10 @@
   &:hover {
     transform: scale(0.95);
   }
+  &__active {
+    background-color: $moderateCyan;
+    
+  }
   @include breakpoints-up(large) {
     width: 11.75rem;
     height: 3.5875rem;
@@ -107,6 +111,6 @@
   }
 }
 .active {
-  background-color: $cyan;
+  background-color: $moderateCyan;
   color: #fff;
 }
