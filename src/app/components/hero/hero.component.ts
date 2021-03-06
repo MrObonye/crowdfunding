@@ -9,7 +9,8 @@ import { ModalService } from '../modal/modal.service';
 export class HeroComponent implements OnInit {
   buttonName = 'Back this project';
   buttonType = 'accept-button';
-  @ViewChild('bookmark', {static: false}) bookmarkButton: ElementRef;
+
+  @ViewChild('bookmark', { static: false }) bookmarkButton: ElementRef;
   bookmarkIcon = './../../assets/images/icon-bookmark.svg';
 
   selected: number;
