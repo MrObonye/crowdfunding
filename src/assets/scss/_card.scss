@@ -1,4 +1,4 @@
-@import './variables';
+@import "./variables";
 
 .card {
   margin: 4.3125rem;
@@ -15,7 +15,7 @@
     font-weight: 700;
     // padding-bottom: 20px;
   }
-  &-text{
+  &-text {
     padding-bottom: 20px;
   }
   &-digits {
@@ -24,12 +24,16 @@
       font-weight: 700;
       padding-bottom: 20px;
       &::after {
-        content: 'left';
+        content: "left";
+        position: absolute;
+        color: gray;
         font-size: 1rem;
         font-weight: 400;
-        padding: 5px;
+        text-align: center;
+        vertical-align: middle;
+        top: 2px;
+        padding: 10px;
       }
     }
   }
-
 }

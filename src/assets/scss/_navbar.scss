@@ -20,6 +20,12 @@
   }
 }
 .navbar-brand {
+ img {
+   content: url(src/assets/images/logo.svg);
+   &:hover {
+     content: url(src/assets/images/logocopy.svg);
+   }
+ }
   @include breakpoints-up(medium) {
     // margin-left: 3.3125rem;
     background-color: transparent;
@@ -97,10 +103,10 @@
     color: white;
     text-decoration: none;
     :hover {
-      color: black;
+      color: $moderateCyan;
     }
   }
 }
 .nav-link > a:hover {
-  color: $Black;
+  color: $moderateCyan;
 }

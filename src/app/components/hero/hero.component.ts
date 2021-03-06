@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { content } from 'src/app/services/content';
 import { ModalService } from '../modal/modal.service';
 
@@ -9,6 +9,10 @@ import { ModalService } from '../modal/modal.service';
 export class HeroComponent implements OnInit {
   buttonName = 'Back this project';
   buttonType = 'accept-button';
+
+  @ViewChild('bookmark', { static: false }) bookmarkButton: ElementRef;
+  bookmarkIcon = './../../assets/images/icon-bookmark.svg';
+
   selected: number;
   analyticsData = [{
     amount: '$89,914',
@@ -18,7 +22,8 @@ export class HeroComponent implements OnInit {
   { amount: '56', total: 'days left' }];
 
   contentData = content;
-  constructor(private modalService: ModalService) { }
+  constructor(private modalService: ModalService) {
+  }
 
   ngOnInit(): void {
   }
@@ -32,5 +37,20 @@ export class HeroComponent implements OnInit {
   select(val) {
     this.selected = val;
 
+  }
+  bookMark() {
+    if (this.bookmarkIcon === './../../assets/images/icon-bookmark.svg') {
+      this.bookmarkIcon = './../../assets/images/icon-bookmarkcopy.svg';
+      this.bookmarkButton.nativeElement.classList.add('bookmark__active');
+    } else {
+      this.bookmarkIcon = './../../assets/images/icon-bookmark.svg';
+      this.bookmarkButton.nativeElement.classList.remove('bookmark__active');
+    }
+  }
+  styleBorder(buttonType: string) {
+
+    if (buttonType === 'disabled-button') {
+      return {'pointer-events': 'none;', opacity: '0.3'};
+    }
   }
 }
