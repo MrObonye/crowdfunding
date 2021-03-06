@@ -2,22 +2,22 @@
   background-image: url(src/assets/images/image-hero-mobile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
-  height: 410px;
+  background-position: center;
+  height: 400px;
+  width: 100%;
   border: none;
   margin-top: -1.875rem;
   @include breakpoints-up(large) {
     margin-top: 0px;
+    height: 400px;
+    width: 100%;
     background-image: url(src/assets/images/image-hero-desktop.jpg);
   }
 }
-.navbar {
-  .navbar-brand {
-
-    @include breakpoints-up(medium) {
-      margin-left: 3.3125rem;
-      background-color: transparent;
-    }
+.navbar-brand {
+  @include breakpoints-up(medium) {
+    // margin-left: 3.3125rem;
+    background-color: transparent;
   }
   @include breakpoints-up(large) {
     margin-left: 10.3125rem;
@@ -27,6 +27,12 @@
 
 .list-group {
   background-color: white;
+  @include breakpoints-up(medium) {
+    // margin-right: 10.3125rem;
+  }
+  @include breakpoints-up(large) {
+    margin-right: -5.3125rem;
+  }
 
   .nav-link {
     @include breakpoints-up(medium) {
@@ -37,7 +43,6 @@
       border: none;
     }
     //add responsiveness for medium sized views
-
 
     a {
       padding: 10px;
@@ -57,7 +62,6 @@
     background-color: transparent;
   }
   // edit the medium screen
-
 }
 
 .navbar-background {
@@ -91,7 +95,6 @@
       color: black;
     }
   }
-
 }
 .nav-link > a:hover {
   color: $Black;
