@@ -5,16 +5,16 @@ import { Component, Input, OnInit } from '@angular/core';
   template: `
     <div class="p-4" >
       <div class="row">
-      <h5 class="card-title col-lg-6">{{ cardTitle }}</h5>
-  <h5 class="card-sub-title col-lg-6 text-lg-right">{{cardSubTitle}}</h5>
+      <h5 class="card-title col-lg-6 col-md-6">{{ cardTitle }}</h5>
+  <h5 class="card-sub-title col-lg-6 col-md-6 text-lg-right text-md-right">{{cardSubTitle}}</h5>
       </div>
 
   <div class="card-text">{{cardText}}</div>
   <div class="row">
-  <div class="card-digits row col-lg-6 m-0">
+  <div class="card-digits row col-lg-6 col-md-6 m-0">
       <h1 class="card-digits-number">{{cardNumber}}</h1>
   </div>
-  <div class="col-lg-6 text-lg-right">
+  <div class="col-lg-6 col-md-6 text-lg-right text-md-right">
   <app-rectangular-button class="mb-3"
     [buttonName]="buttonName"
     [buttonType]="buttonType">
