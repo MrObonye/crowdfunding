@@ -8,13 +8,13 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 300px;
+  height: 25rem;
   width: 100%;
   border: none;
   margin-top: -1.875rem;
   @include breakpoints-up(medium) {
     margin-top: 0px;
-    height: 400px;
+    height: 25rem;
     width: 100%;
     background-image: linear-gradient(
       to bottom,
