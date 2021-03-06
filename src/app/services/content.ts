@@ -22,6 +22,6 @@ export const content = [{
   cardText: ' You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added\
   to our Backer member list. Shipping is included.',
   cardNumber: 0,
-  buttonName: 'Select Reward',
-  buttonType: 'card-button'
+  buttonName: 'Out of stock',
+  buttonType: 'disabled-button'
 }];

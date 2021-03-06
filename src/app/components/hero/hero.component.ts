@@ -47,4 +47,10 @@ export class HeroComponent implements OnInit {
       this.bookmarkButton.nativeElement.classList.remove('bookmark__active');
     }
   }
+  styleBorder(buttonType: string) {
+
+    if (buttonType === 'disabled-button') {
+      return {'pointer-events': 'none;', opacity: '0.3'};
+    }
+  }
 }

@@ -40,9 +40,12 @@
 }
 .disabled-button {
   background-color: $darkGray;
+  color: white;
+  font-weight: 700;
   outline: none;
   width: 9.625rem;
   height: 2.9375rem;
+  border-radius: 1.8125rem;
 }
 .btn-circle {
   position: relative;
@@ -118,8 +121,4 @@
       }
     }
   }
-}
-.active {
-  background-color: $moderateCyan;
-  color: #fff;
 }
