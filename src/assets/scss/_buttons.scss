@@ -6,7 +6,7 @@
   opacity: 1;
   transition: 0.3s;
   &:hover {
-    opacity: 0.6;
+    background-color: $darkCyan;
     transform: scale(0.95);
   }
 }
@@ -19,7 +19,7 @@
   border: none;
   color: white;
   &:hover {
-    opacity: 0.6;
+    background-color: $darkCyan;
     transform: scale(0.95);
   }
 }
@@ -32,7 +32,7 @@
   border: none;
   color: white;
   &:hover {
-    opacity: 0.6;
+    background-color: $darkCyan;
     transform: scale(0.95);
   }
 }
@@ -40,10 +40,6 @@
   background-color: $darkGray;
   width: 9.625rem;
   height: 2.9375rem;
-  &:hover {
-    opacity: 0.6;
-    transform: scale(0.95);
-  }
 }
 .btn-circle {
   position: relative;
@@ -67,7 +63,7 @@
   border: none;
   color: white;
   &:hover {
-    opacity: 0.6;
+    background-color: $darkCyan;
     transform: scale(0.95);
   }
 }
@@ -78,12 +74,7 @@
   opacity: 1;
   transition: 0.3s;
   &:hover {
-    opacity: 0.6;
     transform: scale(0.95);
-  }
-  &--active {
-    background-color: $cyan;
-    color: #fff;
   }
   @include breakpoints-up(large) {
     width: 11.75rem;
