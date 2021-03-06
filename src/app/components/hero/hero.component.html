@@ -13,9 +13,9 @@
         [buttonType]="'accept-button'">
         </app-rectangular-button>
         <div class="col-3 col-lg-6 col-md-6 p-0">
-          <button class="bookmark d-lg-inline d-md-inline d-none"><img class="m-0 pr-1" src="./../../assets/images/icon-bookmark.svg" alt="bookmark icon">
+          <button class="bookmark d-lg-inline d-md-inline d-none" (click)="bookMark()" #bookmark><img class="m-0 pr-1" src="{{bookmarkIcon}}" alt="bookmark icon" >
           </button>
-          <img class="m-0 pr-1 d-sm-none" src="./../../assets/images/icon-bookmark.svg" alt="bookmark icon">
+          <img class="m-0 pr-1 d-sm-none" src="{{bookmarkIcon}}" alt="bookmark icon" (click)="bookMark()">
         </div>
 
       </div>
