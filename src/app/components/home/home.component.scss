@@ -1,1 +1,7 @@
+@import '../../../assets/scss/mixins';
 
+.container {
+  @include breakpoints-up(large) {
+    width: 60%;
+  }
+}
