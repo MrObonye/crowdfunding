@@ -7,6 +7,7 @@
   transition: 0.3s;
   &:hover {
     opacity: 0.6;
+    transform: scale(0.95);
   }
 }
 .accept-button {
@@ -19,6 +20,7 @@
   color: white;
   &:hover {
     opacity: 0.6;
+    transform: scale(0.95);
   }
 }
 .card-button {
@@ -31,6 +33,7 @@
   color: white;
   &:hover {
     opacity: 0.6;
+    transform: scale(0.95);
   }
 }
 .disabled-button {
@@ -39,6 +42,7 @@
   height: 2.9375rem;
   &:hover {
     opacity: 0.6;
+    transform: scale(0.95);
   }
 }
 .btn-circle {
@@ -51,6 +55,7 @@
   color: white;
   &:hover {
     opacity: 0.6;
+    transform: scale(0.95);
   }
 }
 .continue-button {
@@ -63,12 +68,23 @@
   color: white;
   &:hover {
     opacity: 0.6;
+    transform: scale(0.95);
   }
 }
 .bookmark {
   border: none;
   padding: 0;
   margin: 0;
+  opacity: 1;
+  transition: 0.3s;
+  &:hover {
+    opacity: 0.6;
+    transform: scale(0.95);
+  }
+  &--active {
+    background-color: $cyan;
+    color: #fff;
+  }
   @include breakpoints-up(large) {
     width: 11.75rem;
     height: 3.5875rem;
@@ -98,4 +114,8 @@
       font-weight: 700;
     }
   }
+}
+.active {
+  background-color: $cyan;
+  color: #fff;
 }

@@ -35,7 +35,7 @@ export class RectangularButtonComponent implements OnInit {
       return {
         btn: true,
         'btn btn-success': true
-      }
+      };
     }
 
   }
