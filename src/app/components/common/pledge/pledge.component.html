@@ -2,7 +2,7 @@
   [ngStyle]="{'border': index === selected ? 'solid 2px hsl(176, 50%, 47%)' : 'solid 2px gray'}">
   <div class="grid-item1">
     <div class="form-check">
-      <input class="form-check-input" (change)="select(index)" type="radio" #pledge name="pledge" id="pledge">
+      <input class="form-check-input" (change)="select(index)" type="radio" name="pledge" id="pledge">
     </div>
   </div>
   <div class="grid-item2">
@@ -11,7 +11,7 @@
   </div>
   <div class="grid-item4">
     <div class="" *ngIf="cardNumber >= 0">
-      <span class="fw-bolder">
+      <span class="h4 fw-bolder">
         {{cardNumber}}
       </span>left
     </div>

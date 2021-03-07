@@ -42,6 +42,7 @@
 }
 
 .wrapper {
+  position: relative;
   border-radius: 0.625rem;
   .grid-item1 {
     grid-area: radio-button;
@@ -142,4 +143,6 @@
   }
 }
 
-
+.h4 {
+  font-weight: 700;
+}
