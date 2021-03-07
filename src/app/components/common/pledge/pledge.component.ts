@@ -1,5 +1,7 @@
 import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { ModalService } from '../../modal/modal.service';
+import { NgbModalComponent } from '../../modal/ngb-modal/ngb-modal.component';
 
 @Component({
   selector: 'app-pledge',
@@ -15,10 +17,11 @@ export class PledgeComponent implements OnInit {
 
   @Input() index: number;
   @Input() selected: number;
-  
+
 
   @Output() enableBorder = new EventEmitter();
-  constructor(private modalService: ModalService) { }
+  constructor(private modalService: ModalService, public activeModal: NgbActiveModal) {
+  }
 
   ngOnInit(): void {
   }
@@ -26,16 +29,15 @@ export class PledgeComponent implements OnInit {
     this.enableBorder.emit(value);
 
   }
-  openModal(id: string): void {
-    console.log('tset');
 
-    this.modalService.close('custom-modal-1');
-    this.modalService.open(id);
-  }
   closeModal(id: string): void {
     this.modalService.close(id);
+    this.activeModal.dismiss();
   }
   submit(){
-    this.openModal('custom-modal-2');
+    // this.activeModal.dismiss();
+    this.modalService.open('custom-modal-1');
+
+
   }
 }

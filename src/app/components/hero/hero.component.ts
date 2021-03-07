@@ -31,7 +31,7 @@ export class HeroComponent implements OnInit {
   }
   open() {
     const modalRef = this.modalService.open(NgbModalComponent);
-    modalRef.componentInstance.name = 'World';
+    // modalRef.componentInstance.name = 'World';
   }
   /* openModal(id: string): void {
 
