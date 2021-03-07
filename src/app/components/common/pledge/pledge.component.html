@@ -7,15 +7,13 @@
   </div>
   <div class="grid-item2">
     <h5 class="card-title">{{ cardTitle }}</h5>
-  </div>
-  <div class="grid-item3">
     <h5 class="card-sub-title">{{cardSubTitle}}</h5>
   </div>
   <div class="grid-item4">
     <div class="" *ngIf="cardNumber >= 0">
-      <span class="card-digits-number">
+      <span class="fw-bolder">
         {{cardNumber}}
-      </span>
+      </span>left
     </div>
   </div>
   <div class="grid-item5">
@@ -25,7 +23,7 @@
     <p *ngIf="index === selected">Enter your pledge</p>
   </div>
   <div class="grid-item7">
-    <div class="row float-right" *ngIf="index === selected">
+    <div class="row float-lg-right float-md-right justify-content-center" *ngIf="index === selected">
       <div class="input-icon">
         <input type="text" class="input">
         <i>$</i>
@@ -38,7 +36,7 @@
 
 </div>
 
-<app-modal id="custom-modal-2" class="rounded">
+<app-modal id="custom-modal-1" >
   <div class="col text-center">
     <div class="col">
       <img class="text-center" src="../../assets/images/icon-check.svg" alt="check icon">
@@ -52,7 +50,7 @@
         an email once our campaign is completed.</p>
     </div>
     <div class="col text-center my-3">
-      <button class="continue-button my-3" (click)="closeModal('custom-modal-2')">Got it!</button>
+      <button class="continue-button my-3" (click)="closeModal('custom-modal-1')">Got it!</button>
     </div>
 
 
@@ -60,35 +58,4 @@
   </div>
 
 </app-modal>
-<!--   <div class="row">
-    <div class="form-check col-2 p-1">
-      <input class="form-check-input"
-      (change)="select(index)"
-      type="radio"
-      #pledge
-      name="pledge"
-      id="pledge">
-    </div>
-    <div class="row text-left mx-2 col-lg-9">
-      <h5 class="card-title col-sm-10 col-lg-6">{{ cardTitle }}</h5>
-      <h5 class="card-sub-title col-sm-10 col-lg-6">{{cardSubTitle}}</h5>
-    </div>
 
-  </div>
-  <div class="row text-left">
-    <div class="card-text">{{cardText}}</div>
-  </div>
-  <div class="card-digits row m-0" *ngIf="cardNumber >= 0">
-    <h1 class="card-digits-number h5">{{cardNumber}}</h1>
-    <p class="mx-2">left</p>
-  </div>
-  <hr class="w-100">
-  <div class="row d-flex justify-content-between p-3" *ngIf="index === selected">
-    <p class="col-12 col-lg-6 text-left">Enter your pledge</p>
-    <div class="input-icon">
-      <input type="text" class="input">
-      <i>$</i>
-    </div>
-
-   <button type="button" class="continue-button" (click)="submit()">continue</button>
-  </div> -->

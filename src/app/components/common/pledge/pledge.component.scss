@@ -49,13 +49,14 @@
   .grid-item2 {
     grid-area: card-title;
     text-align: left;
-    // width: 10.5rem;
-    /* @include breakpoints-up(large) {
+    //  width: 11.5rem;
+     @include breakpoints-down(small) {
+       width: 17rem;
+    }
+    @include breakpoints-up(large) {
       width: 80%;
     }
-    @include breakpoints-down(small) {
-      width: 10.5rem;
-    } */
+
   }
   .grid-item3 {
     grid-area: sub-title;
@@ -90,17 +91,24 @@
     grid-area: pledge-label;
     text-align: left;
     padding-top: 25px;
+    @include breakpoints-down(small) {
+      text-align: center;
+    }
   }
   .grid-item7 {
     grid-area: input-box;
     text-align: right;
     padding-top: 25px;
+    @include breakpoints-down(small) {
+      text-align: center;
+    }
   }
   @include breakpoints-down(small) {
     display: grid;
+    width: fit-content;
     grid-template-areas:
       "radio-button card-title "
-      "radio-button sub-title "
+      "radio-button card-title "
       "pledge-desc pledge-desc"
       "pledge-count pledge-count"
       "pledge-label pledge-label"
@@ -111,7 +119,7 @@
   display: grid;
   width: 28.125rem;
   grid-template-areas:
-    "radio-button card-title sub-title pledge-count"
+    "radio-button card-title card-title pledge-count"
     "radio-button pledge-desc pledge-desc pledge-desc"
     "pledge-label pledge-label input-box input-box ";
 
@@ -122,11 +130,11 @@
 
   @include breakpoints-up(large) {
     display: grid;
-    width: 43.0625rem;
+    width: 29.0625rem;
     grid-template-areas:
-      "radio-button card-title sub-title pledge-count"
+      "radio-button card-title card-title pledge-count"
       "radio-button pledge-desc pledge-desc pledge-desc"
-      "pledge-label pledge-label pledge-label input-box ";
+      "pledge-label pledge-label input-box input-box ";
 
     .grid-item {
       background-color: rgba(255, 255, 255, 0.8);

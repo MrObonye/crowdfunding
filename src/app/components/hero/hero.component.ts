@@ -1,6 +1,8 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { content } from 'src/app/services/content';
 import { ModalService } from '../modal/modal.service';
+import { NgbModalComponent } from '../modal/ngb-modal/ngb-modal.component';
 
 @Component({
   selector: 'app-hero',
@@ -22,18 +24,22 @@ export class HeroComponent implements OnInit {
   { amount: '56', total: 'days left' }];
 
   contentData = content;
-  constructor(private modalService: ModalService) {
+  constructor(private modalService: NgbModal) {
   }
 
   ngOnInit(): void {
   }
-  openModal(id: string): void {
+  open() {
+    const modalRef = this.modalService.open(NgbModalComponent);
+    // modalRef.componentInstance.name = 'World';
+  }
+  /* openModal(id: string): void {
 
     this.modalService.open(id);
   }
   closeModal(id: string): void {
     this.modalService.close(id);
-  }
+  } */
   select(val) {
     this.selected = val;
 

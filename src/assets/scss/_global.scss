@@ -27,3 +27,15 @@ a:visited,
 a:hover {
   text-decoration: none;
 }
+.modal-dialog {
+  animation: fadein 1s forwards;
+  top: 50px;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}

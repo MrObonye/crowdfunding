@@ -1,0 +1,104 @@
+.pledgePopup {
+  animation: fadein 1s forwards;
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  padding-top: 10rem;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+
+  & .checkbox {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    border: 1px solid lighten($grey-dark, 30%);
+    border-radius: 50%;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      height: 10px;
+      width: 10px;
+      opacity: 0;
+      transform: translateX(-50%) translateY(-50%);
+      border-radius: 50%;
+      color: $cyan;
+      background-color: currentColor;
+    }
+  }
+
+  &__pledge-form {
+    margin-top: $spacing-lg;
+    padding-top: $spacing-sm;
+    padding-bottom: $spacing-sm;
+    border-top: 1px solid #fafafa;
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
+
+  &__button {
+    width: 50%;
+  }
+
+  &__input {
+    border-radius: 5rem;
+    border: 0;
+    outline: 0;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #000;
+    width: 50%;
+    padding: 1.1rem 2rem;
+    flex: 1.5;
+    margin-right: 1rem;
+    background-color: #fafafa;
+    border: 1px solid darken(#fafafa, 20%);
+  }
+
+  & input[type="radio"] {
+    width: 0;
+    height: 0;
+    display: none;
+    &:checked + label > .card {
+      border: 1px solid $cyan;
+      & .checkbox::after {
+        opacity: 1;
+      }
+      & .pledgePopup__pledge-form {
+        display: block;
+      }
+    }
+    & + label:hover > .card .heading-tertiary {
+      color: $cyan;
+    }
+  }
+
+  &__close {
+    display: block;
+    position: absolute;
+    right: $spacing-md;
+    margin-bottom: 3rem;
+    color: lighten($grey-dark, 20%);
+    &:hover {
+      color: $grey-dark;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .pledgePopup {
+    &__input {
+      text-align: center;
+      flex: 1;
+    }
+    &__remaining {
+      position: absolute;
+      top: $spacing-lg;
+      right: $spacing-lg;
+    }
+  }
+}

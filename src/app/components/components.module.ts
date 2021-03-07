@@ -14,6 +14,7 @@ import { HeroComponent } from './hero/hero.component';
 import { ModalComponent } from './modal/modal.component';
 import { PledgeComponent } from './common/pledge/pledge.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgbModalComponent } from './modal/ngb-modal/ngb-modal.component';
 
 
 
@@ -27,7 +28,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NavbarComponent,
     HeroComponent,
     ModalComponent,
-    PledgeComponent
+    PledgeComponent,
+    NgbModalComponent
   ],
   imports: [
     CommonModule,
