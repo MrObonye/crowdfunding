@@ -1,21 +1,19 @@
-<div class="p-4 my-2 rounded"
+<div class="p-4 my-2 rounded wrapper"
   [ngStyle]="{'border': index === selected ? 'solid 2px hsl(176, 50%, 47%)' : 'solid 2px gray'}">
-  <!-- <div class="grid-item1">
+  <div class="grid-item1">
     <div class="form-check">
       <input class="form-check-input" (change)="select(index)" type="radio" #pledge name="pledge" id="pledge">
     </div>
   </div>
   <div class="grid-item2">
     <h5 class="card-title">{{ cardTitle }}</h5>
-  </div>
-  <div class="grid-item3">
     <h5 class="card-sub-title">{{cardSubTitle}}</h5>
   </div>
   <div class="grid-item4">
     <div class="" *ngIf="cardNumber >= 0">
-      <span class="card-digits-number">
+      <span class="fw-bolder">
         {{cardNumber}}
-      </span>
+      </span>left
     </div>
   </div>
   <div class="grid-item5">
@@ -25,7 +23,7 @@
     <p *ngIf="index === selected">Enter your pledge</p>
   </div>
   <div class="grid-item7">
-    <div class="row float-right" *ngIf="index === selected">
+    <div class="row float-lg-right float-md-right justify-content-center" *ngIf="index === selected">
       <div class="input-icon">
         <input type="text" class="input">
         <i>$</i>
@@ -34,7 +32,7 @@
     </div>
 
 
-  </div> -->
+  </div>
 
 </div>
 
