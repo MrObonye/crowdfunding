@@ -51,14 +51,13 @@
   .grid-item2 {
     grid-area: card-title;
     text-align: left;
-    //  width: 11.5rem;
-     @include breakpoints-down(small) {
-       width: 17rem;
+    width: 12rem;
+    @include breakpoints-down(small) {
+
     }
     @include breakpoints-up(large) {
       width: 80%;
     }
-
   }
   .grid-item3 {
     grid-area: sub-title;
@@ -105,33 +104,32 @@
       text-align: center;
     }
   }
-  @include breakpoints-down(small) {
-    display: grid;
-    grid-template-areas:
-      "radio-button card-title "
-      "radio-button card-title "
-      "pledge-desc pledge-desc"
-      "pledge-count pledge-count"
-      "pledge-label pledge-label"
-      "input-box input-box ";
-  }
 
-@include breakpoints-up(medium) {
   display: grid;
-  width: 28.125rem;
   grid-template-areas:
-    "radio-button card-title card-title pledge-count"
-    "radio-button pledge-desc pledge-desc pledge-desc"
-    "pledge-label pledge-label input-box input-box ";
+    "radio-button card-title "
+    "radio-button card-title "
+    "pledge-desc pledge-desc"
+    "pledge-count pledge-count"
+    "pledge-label pledge-label"
+    "input-box input-box ";
 
-  .grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
+  @include breakpoints-up(medium) {
+    display: grid;
+    // width: 28.125rem;
+    grid-template-areas:
+      "radio-button card-title card-title pledge-count"
+      "radio-button pledge-desc pledge-desc pledge-desc"
+      "pledge-label pledge-label input-box input-box ";
+
+    .grid-item {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
   }
-}
 
   @include breakpoints-up(large) {
     display: grid;
-    width: 29.0625rem;
+    // width: 29.0625rem;
     grid-template-areas:
       "radio-button card-title card-title pledge-count"
       "radio-button pledge-desc pledge-desc pledge-desc"
