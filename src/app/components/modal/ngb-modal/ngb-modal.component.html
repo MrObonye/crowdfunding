@@ -1,0 +1,27 @@
+<div class="modal-header">
+  <div class="container-fluid">
+    <div class="row d-flex flex-direction-column justify-content-between mb-2">
+      <h5 class="text-left fw-bolder mt-2 float-left">Back this project</h5>
+      <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+    <div class="row text-left">
+      <p>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
+
+    </div>
+    <div class="row">
+      <app-pledge [cardTitle]="'Pledge with no reward'" [cardSubTitle]="''" [cardText]="'Choose to support us without a reward if you simply believe in our project. As a backer,\
+      you will be signed up to receive product updates via email.'"
+      [cardNumber]="-1" [index]="1" (enableBorder)="select($event)" [selected]="selected"></app-pledge>
+      <app-pledge [cardTitle]="contentData[0].cardTitle" [cardSubTitle]="contentData[0].cardSubTitle" [cardText]="contentData[0].cardText"
+      [cardNumber]="contentData[0].cardNumber" [index]="2" (enableBorder)="select($event)" [selected]="selected"></app-pledge>
+      <app-pledge [cardTitle]="contentData[1].cardTitle" [cardSubTitle]="contentData[1].cardSubTitle" [cardText]="contentData[1].cardText"
+      [cardNumber]="contentData[1].cardNumber" [index]="3" (enableBorder)="select($event)" [selected]="selected"></app-pledge>
+      <app-pledge [cardTitle]="contentData[2].cardTitle" [cardSubTitle]="contentData[2].cardSubTitle" [cardText]="contentData[2].cardText"
+      [cardNumber]="contentData[2].cardNumber" [index]="4" (enableBorder)="select($event)" [selected]="selected" style="pointer-events: none; opacity: 0.3;"></app-pledge>
+    </div>
+  </div>
+  <!-- <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button> -->
+</div>
