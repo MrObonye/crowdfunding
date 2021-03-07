@@ -17,13 +17,13 @@
   transform: translate(0, -50%);
   top: 50%;
   pointer-events: none;
-  width: 25px;
+  width: 1.5625rem;
   text-align: center;
   font-style: normal;
 }
 
 .input-icon > input {
-  padding-left: 25px;
+  padding-left: 1.5625rem;
   padding-right: 0;
 }
 
@@ -33,7 +33,7 @@
 
 .input-icon-right > input {
   padding-left: 0;
-  padding-right: 25px;
+  padding-right: 1.5625rem;
   text-align: right;
 }
 .green {
@@ -42,6 +42,7 @@
 }
 
 .wrapper {
+  border-radius: 0.625rem;
   .grid-item1 {
     grid-area: radio-button;
     text-align: left;
@@ -90,7 +91,7 @@
   .grid-item6 {
     grid-area: pledge-label;
     text-align: left;
-    padding-top: 25px;
+    padding-top: 1.5625rem;
     @include breakpoints-down(small) {
       text-align: center;
     }
@@ -98,14 +99,13 @@
   .grid-item7 {
     grid-area: input-box;
     text-align: right;
-    padding-top: 25px;
+    padding-top: 1.5625rem;
     @include breakpoints-down(small) {
       text-align: center;
     }
   }
   @include breakpoints-down(small) {
     display: grid;
-    width: fit-content;
     grid-template-areas:
       "radio-button card-title "
       "radio-button card-title "
